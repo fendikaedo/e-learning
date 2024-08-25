@@ -4,7 +4,7 @@
         <div class="col-lg d-flex align-items-stretch">
             <div class="card w-100">
                 <div class="card-body p-4">
-                    <h5 class="card-title fw-semibold mb-4">Data Guru eLearning</h5>
+                    <h5 class="card-title fw-semibold mb-4">Data Jabatan eLearning</h5>
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <form class="d-flex" role="search">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -12,7 +12,7 @@
                                 <img src="{{ asset('assets/images/button/search.svg') }}" width="20" alt="">
                             </button>
                         </form>
-                        <a href="{{ route('data_guru.create') }}">
+                        <a href="{{ route('data_jabatan.create') }}">
                             <div class="btn btn-success">
                                 <img src="{{ asset('assets/images/button/create.svg') }}" width="20" alt="">
                             </div>
@@ -27,22 +27,7 @@
                                         <h6 class="fw-semibold mb-0">No</h6>
                                     </th>
                                     <th class="border-bottom-0">
-                                        <h6 class="fw-semibold mb-0">NIP</h6>
-                                    </th>
-                                    <th class="border-bottom-0">
-                                        <h6 class="fw-semibold mb-0">Nama Lengkap</h6>
-                                    </th>
-                                    <th class="border-bottom-0">
                                         <h6 class="fw-semibold mb-0">Jabatan</h6>
-                                    </th>
-                                    <th class="border-bottom-0">
-                                        <h6 class="fw-semibold mb-0">Jenis Kelamin</h6>
-                                    </th>
-                                    <th class="border-bottom-0">
-                                        <h6 class="fw-semibold mb-0">Alamat</h6>
-                                    </th>
-                                    <th class="border-bottom-0">
-                                        <h6 class="fw-semibold mb-0">No Handphone</h6>
                                     </th>
                                     <th class="border-bottom-0">
                                         <h6 class="fw-semibold mb-0">Actions</h6>
@@ -50,49 +35,31 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($guru as $data)
+                                @foreach ($jabatan as $data)
                                     <tr>
                                         <td class="border-bottom-0">
                                             <h6 class="fw-semibold mb-0">{{ $loop->iteration }}</h6>
                                         </td>
                                         <td class="border-bottom-0">
-                                            <h6 class="fw-normal mb-1">{{ $data->nip }}</h6>
-                                        </td>
-                                        <td class="border-bottom-0">
-                                            <p class="mb-0 fw-normal">{{ $data->nama_guru }}</p>
-                                        </td>
-                                        <td class="border-bottom-0">
-                                            <span
-                                                class="badge bg-primary rounded-3 fw-semibold">{{ $data->jabatan->nama_jabatan }}</span>
-                                        </td>
-                                        <td class="border-bottom-0">
-                                            <h6 class="fw-normal mb-0">{{ $data->jenis_kelamin }}</h6>
-                                        </td>
-                                        <td class="border-bottom-0">
-                                            <h6 class="fw-normal mb-0">{{ $data->alamat }}</h6>
-                                        </td>
-                                        <td class="border-bottom-0">
-                                            <h6 class="fw-normal mb-0">{{ $data->no_telp }}</h6>
+                                            <h6 class="fw-normal mb-1">{{ $data->nama_jabatan }}</h6>
                                         </td>
                                         <td class="border-bottom-0">
                                             <span>
-                                                <div class="btn btn-sm btn-primary">
+                                                <div class="btn btn-sm">
                                                     <img src="{{ asset('assets/images/button/edit.svg') }}" width="20"
                                                         alt="">
                                                 </div>
                                             </span>
                                             <span>
-                                                <a href="">
-                                                    <div class="btn btn-sm btn-secondary">
-                                                        <img src="{{ asset('assets/images/button/show.svg') }}"
-                                                            width="20" alt="">
-                                                    </div>
-                                                </a>
+                                                <div class="btn btn-sm">
+                                                    <img src="{{ asset('assets/images/button/show.svg') }}" width="20"
+                                                        alt="">
+                                                </div>
                                             </span>
                                             <span>
-                                                <div class="btn btn-sm btn-danger">
-                                                    <img src="{{ asset('assets/images/button/delete.svg') }}"
-                                                        width="20" alt="">
+                                                <div class="btn btn-sm">
+                                                    <img src="{{ asset('assets/images/button/delete.svg') }}" width="20"
+                                                        alt="">
                                                 </div>
                                             </span>
                                         </td>

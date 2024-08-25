@@ -45,7 +45,7 @@
                             <span class="hide-menu">Guru</span>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="/data_guru" aria-expanded="false">
+                            <a class="sidebar-link" href="{{ route('data_guru.index') }}" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-article"></i>
                                 </span>
@@ -62,6 +62,18 @@
                                     <i class="ti ti-article"></i>
                                 </span>
                                 <span class="hide-menu">Data Siswa</span>
+                            </a>
+                        </li>
+                        <li class="nav-small-cap">
+                            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                            <span class="hide-menu">Master</span>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="{{ route('data_jabatan.index') }}" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-article"></i>
+                                </span>
+                                <span class="hide-menu">Jabatan</span>
                             </a>
                         </li>
                     </ul>
