@@ -75,26 +75,32 @@
                                             <h6 class="fw-normal mb-0">{{ $data->no_telp }}</h6>
                                         </td>
                                         <td class="border-bottom-0">
-                                            <span>
-                                                <div class="btn btn-sm btn-primary">
-                                                    <img src="{{ asset('assets/images/button/edit.svg') }}" width="20"
-                                                        alt="">
-                                                </div>
-                                            </span>
-                                            <span>
-                                                <a href="">
-                                                    <div class="btn btn-sm btn-secondary">
-                                                        <img src="{{ asset('assets/images/button/show.svg') }}"
+                                            <form action="{{ route('data_guru.destroy', $data->id) }}" method="POST">
+                                                @method('DELETE')
+                                                @csrf
+                                                <span>
+                                                    <a href="{{ route('data_guru.edit', ['id_guru' => $data->id]) }}">
+                                                        <div class="btn btn-sm btn-primary">
+                                                            <img src="{{ asset('assets/images/button/edit.svg') }}"
+                                                                width="20" alt="">
+                                                        </div>
+                                                    </a>
+                                                </span>
+                                                <span>
+                                                    <a href="{{ route('data_guru.show', ['id_guru' => $data->id]) }}">
+                                                        <div class="btn btn-sm btn-secondary">
+                                                            <img src="{{ asset('assets/images/button/show.svg') }}"
+                                                                width="20" alt="">
+                                                        </div>
+                                                    </a>
+                                                </span>
+                                                <span>
+                                                    <button class="btn btn-sm btn-danger">
+                                                        <img src="{{ asset('assets/images/button/delete.svg') }}"
                                                             width="20" alt="">
-                                                    </div>
-                                                </a>
-                                            </span>
-                                            <span>
-                                                <div class="btn btn-sm btn-danger">
-                                                    <img src="{{ asset('assets/images/button/delete.svg') }}"
-                                                        width="20" alt="">
-                                                </div>
-                                            </span>
+                                                    </button>
+                                                </span>
+                                            </form>
                                         </td>
                                     </tr>
                                 @endforeach

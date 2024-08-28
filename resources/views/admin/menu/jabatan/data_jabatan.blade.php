@@ -12,7 +12,7 @@
                                 <img src="{{ asset('assets/images/button/search.svg') }}" width="20" alt="">
                             </button>
                         </form>
-                        <a href="{{ route('data_jabatan.create') }}">
+                        <a href="{{ route('jabatan.create') }}">
                             <div class="btn btn-success">
                                 <img src="{{ asset('assets/images/button/create.svg') }}" width="20" alt="">
                             </div>
@@ -44,24 +44,16 @@
                                             <h6 class="fw-normal mb-1">{{ $data->nama_jabatan }}</h6>
                                         </td>
                                         <td class="border-bottom-0">
-                                            <span>
-                                                <div class="btn btn-sm">
-                                                    <img src="{{ asset('assets/images/button/edit.svg') }}" width="20"
-                                                        alt="">
-                                                </div>
-                                            </span>
-                                            <span>
-                                                <div class="btn btn-sm">
-                                                    <img src="{{ asset('assets/images/button/show.svg') }}" width="20"
-                                                        alt="">
-                                                </div>
-                                            </span>
-                                            <span>
-                                                <div class="btn btn-sm">
-                                                    <img src="{{ asset('assets/images/button/delete.svg') }}" width="20"
-                                                        alt="">
-                                                </div>
-                                            </span>
+                                            <form action="{{ route('jabatan.destroy', $data->id) }}" method="POST">
+                                                @method('DELETE')
+                                                @csrf
+                                                <span>
+                                                    <button class="btn btn-sm">
+                                                        <img src="{{ asset('assets/images/button/delete.svg') }}"
+                                                            width="20" alt="">
+                                                    </button>
+                                                </span>
+                                            </form>
                                         </td>
                                     </tr>
                                 @endforeach

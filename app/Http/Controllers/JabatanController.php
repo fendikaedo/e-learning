@@ -38,7 +38,7 @@ class JabatanController extends Controller
             $jabatan = new Jabatan();
             $jabatan->nama_jabatan = $request->nama_jabatan;
             if ($jabatan->save()) {
-                return redirect()->route('data_jabatan.index');
+                return redirect()->route('jabatan.index');
             } else {
                 return back();
             }
@@ -74,6 +74,9 @@ class JabatanController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $jabatan = Jabatan::find($id);
+        $jabatan->delete();
+
+        return back();
     }
 }
