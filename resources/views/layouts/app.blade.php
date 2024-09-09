@@ -55,17 +55,17 @@
                         <li class="sidebar-item">
                             <a class="sidebar-link" href="#" aria-expanded="false">
                                 <span>
-                                    <i class="ti ti-file-upload"></i>
-                                </span>
-                                <span class="hide-menu">Materi</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="#" aria-expanded="false">
-                                <span>
                                     <i class="ti ti-activity"></i>
                                 </span>
                                 <span class="hide-menu">Absensi Kelas</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="{{ route('materi.index') }}" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-file-upload"></i>
+                                </span>
+                                <span class="hide-menu">Materi</span>
                             </a>
                         </li>
                         <li class="nav-small-cap">
@@ -108,9 +108,25 @@
                                 <span class="hide-menu">Account Siswa</span>
                             </a>
                         </li>
+                        {{-- <li class="sidebar-item">
+                            <a class="sidebar-link" href="{{ route('role.index') }}" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-user-circle"></i>
+                                </span>
+                                <span class="hide-menu">Role</span>
+                            </a>
+                        </li> --}}
                         <li class="nav-small-cap">
                             <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
                             <span class="hide-menu">Master</span>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="{{ route('mapel.index') }}" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-article"></i>
+                                </span>
+                                <span class="hide-menu">Mata Pelajaran</span>
+                            </a>
                         </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link" href="{{ route('jabatan.index') }}" aria-expanded="false">
@@ -118,18 +134,6 @@
                                     <i class="ti ti-article"></i>
                                 </span>
                                 <span class="hide-menu">Jabatan</span>
-                            </a>
-                        </li>
-                        <li class="nav-small-cap">
-                            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                            <span class="hide-menu">Setting</span>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="#" aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-settings"></i>
-                                </span>
-                                <span class="hide-menu">Profile</span>
                             </a>
                         </li>
                     </ul>
@@ -176,15 +180,10 @@
                                         </a>
                                         <a href="javascript:void(0)"
                                             class="d-flex align-items-center gap-2 dropdown-item">
-                                            <i class="ti ti-mail fs-6"></i>
-                                            <p class="mb-0 fs-3">My Account</p>
+                                            <i class="ti ti-settings fs-6"></i>
+                                            <p class="mb-0 fs-3">Settings</p>
                                         </a>
-                                        <a href="javascript:void(0)"
-                                            class="d-flex align-items-center gap-2 dropdown-item">
-                                            <i class="ti ti-list-check fs-6"></i>
-                                            <p class="mb-0 fs-3">My Task</p>
-                                        </a>
-                                        <a href="./authentication-login.html"
+                                        <a href="/"
                                             class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
                                     </div>
                                 </div>
