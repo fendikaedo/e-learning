@@ -67,8 +67,8 @@
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="/admin" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Login</a>
-                    <a href="/admin" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Register</a>
+                    <a href="{{ route('login') }}" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Login</a>
+                    <a href="{{ route('register') }}" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Register</a>
                 </div>
             </nav>
 
@@ -81,9 +81,19 @@
                             <a href="" class="btn btn-secondary py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Read More</a>
                             <a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
                         </div>
-                        {{-- <div class="col-lg-6 text-center text-lg-start">
-                            <img class="img-fluid animated zoomIn" src="{{ asset('asset/img/hero.png') }}" alt="">
-                        </div> --}}
+                        <div class="col-md-8 my-4">
+                            <div class="card border-0 shadow rounded">
+                                <div class="card-body">
+                                    {{-- Selamat Datang <strong>{{ auth()->user()->name }}</strong> --}}
+                                    <hr>
+                                    <a href="{{ route('logout') }}" style="cursor: pointer" onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();" class="btn btn-md btn-primary">LOGOUT</a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                       @csrf
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

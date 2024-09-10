@@ -12,6 +12,11 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/masuk', function () {
+    return view('auth.login');
+})->middleware('auth');
+
+
 //DASHBOARD
 Route::get('/admin', [DashboardController::class, 'index']);
 
